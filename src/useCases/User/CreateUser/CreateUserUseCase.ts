@@ -1,7 +1,7 @@
-import { IUsersRepository } from "../../repositories/IUsersRepository";
+import { IUsersRepository } from "../../../repositories/IUsersRepository";
 import { ICreateUserRequestDTO } from "./CreateUserDTO";
-import { User } from "../../entities/User";
-import { IMailProvider } from "../../providers/IMailProvider";
+import { User } from "../../../entities/User";
+import { IMailProvider } from "../../../providers/IMailProvider";
 
 export class CreateUserUseCase {
   constructor(
