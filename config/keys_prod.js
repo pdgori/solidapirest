@@ -1,0 +1,6 @@
+module.exports = {
+    TWILIO_ACCOUNTSID: process.env.TWILIO_ACCOUNTSID,
+    TWILIO_AUTHTOKEN: process.env.TWILIO_AUTHTOKEN,
+    MAILTRAP_USER: process.env.MAILTRAP_USER,
+    MAILTRAP_PASS: process.env.MAILTRAP_PASS
+};
