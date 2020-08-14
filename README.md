@@ -56,7 +56,7 @@ You can use postman with the following endpoints:
 	"from": "{TwilioValidNumber}",
 	"to": [{
 		"type": "phone", 
-		number": "{MSISNDFormat}"
+		"number": "{MSISNDFormat}"
 	}],
 	"body": "Hello from twilio solidapirest"
 }
@@ -85,7 +85,7 @@ You can use postman with the following endpoints:
 	"from": "{TwilioValidNumber}",
 	"to": [{
 		"type": "phone", 
-		number": "{MSISNDFormat}"
+		"number": "{MSISNDFormat}"
 	}],
 	"body": "Hello from twilio solidapirest"
 }
