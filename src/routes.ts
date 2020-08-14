@@ -5,7 +5,7 @@ import {
   updateUserController,
 } from "./useCases/User";
 
-import { smsController, callController } from "./useCases/Twilio";
+import { smsController, callController } from "./useCases/Messaging";
 
 const router = Router();
 

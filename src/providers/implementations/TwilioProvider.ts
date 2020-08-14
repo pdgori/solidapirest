@@ -17,7 +17,7 @@ export class TwilioProvider implements IMessageSenderProvider {
   async call(message: ICallProvider): Promise<object> {
     return await this.client.calls.create({
       url: message.url,
-      to: message.to, // Text this number
+      to: message.to[0].number, // Text this number
       from: message.from, // From a valid Twilio number
     });
   }
@@ -25,7 +25,7 @@ export class TwilioProvider implements IMessageSenderProvider {
   async sms(message: ISmsProvider): Promise<Object> {
     return await this.client.messages.create({
       body: message.body,
-      to: message.to, // Text this number
+      to: message.to[0].number, // Text this number
       from: message.from, // From a valid Twilio number
     });
   }
