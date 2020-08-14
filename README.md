@@ -44,7 +44,7 @@ You can use postman with the following endpoints:
 	"from": "{TwilioValidNumber}", 
 	"to": [{
 		"type": "phone", 
-		number": "{MSISNDFormat}"
+		"number": "{MSISNDFormat}"
 	}]
 }
 ```
