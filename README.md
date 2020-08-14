@@ -2,8 +2,8 @@
 
 MailTrap, Twilio and Nexmo Implemented.
 
-**Twilio sending SMS and CALLs.
-**Nexmo sending only SMS
+- Twilio sending SMS and CALLs.
+- Nexmo sending only SMS
 
 - http://mailtrap.io/
 - https://www.twilio.com/
