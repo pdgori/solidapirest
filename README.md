@@ -1,11 +1,13 @@
 # Restful API with NODE JS using SOLID Principles 
 
-MailTrap and Twilio Implemented.
+MailTrap, Twilio and Nexmo Implemented.
 
 **Twilio sending SMS and CALLs.
+**Nexmo sending only SMS
 
 - http://mailtrap.io/
 - https://www.twilio.com/
+- https://developer.nexmo.com/
 
 
 ## How to setup
