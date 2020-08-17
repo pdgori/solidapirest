@@ -3,6 +3,7 @@ import {
   createUserController,
   getUserController,
   updateUserController,
+  deleteUserController,
 } from "./useCases/User";
 
 import { smsController, callController } from "./useCases/Messaging";
@@ -15,6 +16,10 @@ router.post("/users", (request, response) => {
 
 router.put("/users/:id", (request, response) => {
   return updateUserController.handle(request, response);
+});
+
+router.delete("/users/:id", (request, response) => {
+  return deleteUserController.handle(request, response);
 });
 
 router.get("/users", (request, response) => {
