@@ -1,11 +1,13 @@
 # Restful API with NODE JS using SOLID Principles 
 
-MailTrap and Twilio Implemented.
+MailTrap, Twilio and Nexmo Implemented.
 
-**Twilio sending SMS and CALLs.
+- Twilio sending SMS and CALLs.
+- Nexmo sending only SMS
 
 - http://mailtrap.io/
 - https://www.twilio.com/
+- https://developer.nexmo.com/
 
 
 ## How to setup
@@ -21,7 +23,10 @@ Create a new file named keys_dev.js inside the config folder as below.
 ```js
 module.exports = {
     TWILIO_ACCOUNTSID: "{ACCOUNT_SID}",
-    TWILIO_AUTHTOKEN: "{AUTH_TOKEN",
+    TWILIO_AUTHTOKEN: "{AUTH_TOKEN}",
+    NEXMO_APIKEY: "{APIKEY}",
+    NEXMO_APISECRET: "{APISECRET}",
+    NEXMO_APPLICATIONID: "{APPLICATIONID}",
     MAILTRAP_USER: "{MAILTRAP_USER}",
     MAILTRAP_PASS: "{MAILTRAP_PASS}",
 };
@@ -31,23 +36,64 @@ It's serving http://localhost:3333
 
 You can use postman with the following endpoints:
 
+### Twilio
+
+#### Call
 - (POST) http://localhost:3333/call
 ```json
 {
 	"url": "http://demo.twilio.com/docs/voice.xml",
 	"from": "{TwilioValidNumber}", 
-	"to": "{MSISNDFormat}" 
+	"to": [{
+		"type": "phone", 
+		"number": "{MSISNDFormat}"
+	}]
 }
 ```
 
+#### Message
 - (POST) http://localhost:3333/message
 ```json
 {
 	"from": "{TwilioValidNumber}",
-	"to": "{MSISNDFormat}" ,
+	"to": [{
+		"type": "phone", 
+		"number": "{MSISNDFormat}"
+	}],
 	"body": "Hello from twilio solidapirest"
 }
 ```
+
+### Nexmo
+
+#### Call
+- (POST) http://localhost:3333/call
+```json
+{
+	"to": [{ "type": "phone", "number": "{MSISNDFormat}" }],
+	"from": { "type": "phone", "number": "{MSISNDFormat}" },
+	"ncco": {
+		"action": "talk",
+		"voiceName": "Joey",
+    		"text": "This is a text-to-speech test message."
+	}
+}
+```
+
+#### Message
+- (POST) http://localhost:3333/message
+```json
+{
+	"from": "{TwilioValidNumber}",
+	"to": [{
+		"type": "phone", 
+		"number": "{MSISNDFormat}"
+	}],
+	"body": "Hello from twilio solidapirest"
+}
+```
+
+### CRUD
 
 - (POST) http://localhost:3333/users
 ```json
